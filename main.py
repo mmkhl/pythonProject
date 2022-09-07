@@ -1,15 +1,13 @@
 # 1 задача
 #Три сопротивления R u R 2y R 3 соединены параллельно. Найти сопротивление соединения.
 
-firstResistance = int(input("Введите значение R1: "))
-secondResistance = int(input("Введите значение R2: "))
-thirdResistance = int(input("Введите значение R3: "))
+firstRes = int(input("Введите значение R1: "))
+secondRes = int(input("Введите значение R2: "))
+thirdRes = int(input("Введите значение R3: "))
 
+result = (firstRes * secondRes * thirdRes) / ((firstRes * secondRes) + (secondRes * thirdRes) + (firstRes * thirdRes))
 
-
-
-
-
+print('Общее сопротивление при параллельном соединении: ', result, ' Ом')
 
 
 

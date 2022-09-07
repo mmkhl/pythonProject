@@ -36,6 +36,26 @@
 
 # 3 задача Простейшие циклы
 
-# Даны действительные числа а, Л, натуральное число я.
-# Вычислить f (a) + 2/ (а + h) + 2/ (а + 2h) + ... + -2f(a + (n— l)h) + f(a + nh), где
+# Даны действительные числа a, h, натуральное число n.
+# Вычислить f(a)+2f(а+h)+2f(а+2h)+...+2f(a+(n—1)h)+f(a+nh), где
 # f(x) = (x^2 + 1) cos^2 x.
+
+import math
+
+finalValue = int(0)
+a = int(input('Введите значение числа а: '))
+h = int(input('Введите значение числа h: '))
+n = int(input('Введите количество итераций: '))
+
+
+def base_func(param):
+    result = ((param * param + 1) * math.cos(param) * math.cos(param))
+    return result
+
+def calc_value(a, h, n, final_val):
+    for i in range(n):
+        final_val += base_func(a + n * h)
+        print(final_val)
+    return final_val
+
+print('Результат вычислений: ', calc_value(a, h, n, finalValue))

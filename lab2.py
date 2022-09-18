@@ -107,6 +107,15 @@
 # Входные данные
 # Вводится строка.
 
+# str = input("Введите любую строку с 2 одинаковыми буквами: ")
+# findChar = input("Введите символ, для поиска: ")
+# res = []
+# pos = str.find(findChar)
+# while pos != -1:
+#     res.append(pos)
+#     pos = str.find(findChar, pos + 1)
+# ans = str[:res[0]+1] + str[res[0] + 1:res[-1]] * 2 + str[res[-1]:]
+# print("Результат дублирования: ", ans)
 
 
 

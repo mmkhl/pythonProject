@@ -122,7 +122,3 @@ print(len(union))
 print('\n'.join(sorted(union)))
 print(len(all))
 print('\n'.join(sorted(all)))
-
-
-
-wed

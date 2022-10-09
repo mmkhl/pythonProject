@@ -49,7 +49,7 @@ def startGame():
 
     result_entry = tk.Entry(newWindow, textvariable=message)
     result_entry.place(relx=.5, rely=.5 )
-    lableStart = tk.Label(newWindow,  text = "Угадай число")
+    lableStart = tk.Label(newWindow,  text = "Угадай число ${}")
     buttonCheck = tk.Button(newWindow, text = "Проверить", command=game_Process)
     buttonClear = tk.Button(newWindow, text="Очистить", command=clear)
     lableStart.pack(expand=True)

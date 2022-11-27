@@ -3,15 +3,15 @@
 # и два таких целых числа x и y, что ax+by=d. Программа должна вывести числа d, x, y.
 
 #
-# def gcd_extended(num1, num2):
-#     if num1 == 0:
-#         return (num2, 0, 1)
-#     else:
-#         div, x, y = gcd_extended(num2 % num1, num1)
-#     return (div, y - (num2 // num1) * x, x)
-#
-# a = gcd_extended(426, 334)
-# print(f'Делитель равен {a[0]}, x = {a[1]}, y = {a[2]}')
+def gcd_extended(num1, num2):
+    if num1 == 0:
+        return (num2, 0, 1)
+    else:
+        div, x, y = gcd_extended(num2 % num1, num1)
+    return (div, y - (num2 // num1) * x, x)
+
+a = gcd_extended(426, 334)
+print(f'Делитель равен {a[0]}, x = {a[1]}, y = {a[2]}')
 #
 # # Делитель равен 2, x = 69, y = -88
 # #
@@ -72,16 +72,16 @@
 # # Вычислите сумму всех чисел, записанных в файле. В данной задаче удобно считывать данные посимвольно.
 
 
-# import re # импортируем модуль регулярных выражений
-#
-# inp = open('input.txt', 'r')
-# out = open('output.txt', 'a')
-# summ = 0
-#
-# numbers = inp.read() # читаем файл
-# numbers = re.findall(r'[+-]?\d+', numbers) # находим все числа без/с префиксами + и -
-# numbers = [int(x) for x in numbers] # приводим числа к типу int с помощью list comprehension
-#
+import re # импортируем модуль регулярных выражений
+
+inp = open('input.txt', 'r')
+out = open('output.txt', 'a')
+summ = 0
+
+numbers = inp.read() # читаем файл
+numbers = re.findall(r'[+-]?\d+', numbers) # находим все числа без/с префиксами + и -
+numbers = [int(x) for x in numbers] # приводим числа к типу int с помощью list comprehension
+
 # # суммируем числа
 # for x in numbers:
 #     summ += x

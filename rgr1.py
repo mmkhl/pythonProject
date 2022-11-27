@@ -1,17 +1,12 @@
 # Необходимо написать любую игру на питоне
 # игра "Угадай число" представляет из себя программу с консольным вводом выводом
-
 import tkinter as tk
 from random import randint
 from tkinter import messagebox
-import os
 
 someNum = randint(1, 42)
 sumAttempt = 0
-
 def game_Process():
-    # message = tk.StringVar()
-
     def get_entry(result_entry):
         s = result_entry.get()
         return int(s)
